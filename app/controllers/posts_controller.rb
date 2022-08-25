@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[ show ]
+  before_action :set_post, only: %i[show]
 
 
   def index
+    flash.now[:error] = "Yay!"
+    flash.now[:notice] = "Yay!"
     @posts = Post.all
   end
 
@@ -20,10 +22,10 @@ class PostsController < ApplicationController
 
 
     if @post.save
-      format.html { redirect_to post_url(@post), notice: "Post criado." }
+       redirect_to post_url(@post), notice: "Post criado com sucesso."
 
     else
-      format.html { render :new, status: :unprocessable_entity }
+       render :new, status: :unprocessable_entity
     end
   end
 

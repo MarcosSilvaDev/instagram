@@ -10,4 +10,6 @@ import "channels"
 Rails.start()
 ActiveStorage.start()
 
-import "../src/application.css"
+import "../src/application.css";
+
+import "./flashMessages.js";
