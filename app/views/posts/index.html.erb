@@ -1,17 +1,17 @@
 <main class="posts-page container">
   <section class="posts">
     <% if @posts.any? %>
-      oi
+      <%= render @posts %>
     <% else %>
-      Nenhum post ainda
+      Nenhum post ainda.
     <% end %>
   </section>
 
   <aside>
-    sidebar
 
     <section class="suggestions">
       <h4>Sugestões Para Você</h4>
+
     </section>
   </aside>
 
