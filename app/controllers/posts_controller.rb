@@ -3,8 +3,6 @@ class PostsController < ApplicationController
 
 
   def index
-    flash.now[:error] = "Yay!"
-    flash.now[:notice] = "Yay!"
     @posts = Post.all
   end
 
