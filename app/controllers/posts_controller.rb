@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[show]
+  include SuggestedUsers
 
+  before_action :set_post, only: %i[show]
+  before_action :set_suggested_users, only: %i[index]
 
   def index
     @posts = Post.all
