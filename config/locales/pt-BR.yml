@@ -19,3 +19,8 @@ pt-BR:
         password: 'Senha'
         password_confirmation: 'Senha (confirmação)'
 
+  erros:
+    messages:
+      content_type_invalid: 'Tipo de arquivo inválido'
+      file_size_out_of_range: "O arquivo deve ter até 5 MB"
+
