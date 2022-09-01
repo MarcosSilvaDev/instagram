@@ -15,13 +15,13 @@ class LikesController < ApplicationController
     render json: { successful: @like.destroy }
   end
 
+  private
+
   def set_like
     @like = current_user.likes.find(params[:id])
   end
 
-  private
-
   def like_params
-    params.require(:like).permit(:post_id )
+    params.require(:like).permit(:post_id)
   end
 end

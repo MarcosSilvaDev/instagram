@@ -3,15 +3,18 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs"
-import * as ActiveStorage from "@rails/activestorage"
-import "channels"
-
-Rails.start()
-ActiveStorage.start()
+import Rails from "@rails/ujs";
+import * as ActiveStorage from "@rails/activestorage";
+import "channels";
 
 import "../src/application.css";
 
-import "./flashMessages.js";
+import "./flashMessages";
+import "./modal";
+import "./likes";
 
-import "./modal"
+require("trix");
+require("@rails/actiontext");
+
+Rails.start();
+ActiveStorage.start();
